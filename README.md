@@ -1,1 +1,577 @@
-butchers's system 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>copps.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- my css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/6.6.0/css/all.min.css"/>
+<!-- signin/signup starts-->
+<display class="infor">System developed by Chanda Mathews 2025. call/whatsApp 0777713723 for  queries, technical challenges, or need for similar System and many more.</div>
+<section id="search">
+    
+  <style>
+    
+
+    *{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "poppins",Sans-Serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #cad6ff;
+  background: #c9d6ff;
+}
+.infor {
+    margin-left: 40px;
+    align-items: center;
+}
+
+.all{
+width: 900px;
+height: 600px;
+align-items: center;
+margin: 20px auto;
+}
+#signuppage{
+background: #fff;
+width: 80%;
+padding: 1.5rem;
+margin: 50px auto;
+border-radius: 10px;
+box-shadow: 0 20px 35px rgb(0,0,1,0.9);
+}
+#signinpage{
+background: #fff;
+width: 450px;
+padding: 1.5rem;
+margin: 50px auto;
+border-radius: 10px;
+box-shadow: 0 20px 35px rgb(0,0,1,0.9);
+}
+form {
+margin: 0, 2rem;
+}
+.form-title{
+font-size: 1.5rem;
+font-weight: bold;
+text-align: center;
+padding: 1.3rem;
+margin-bottom: 0.4rem;
+}
+input{
+color: inherit;
+width: 100%;
+background-color: transparent;
+border: none;
+border-bottom: 1px solid #757575;
+font-size: 15px;
+}
+.input-group{
+padding: 1% 0;
+position: relative;
+}
+.input-group:{
+position: absolute;
+color: black;
+}
+input:focus{
+background-color: transparent;
+outline: transparent;
+border-bottom: 2px solid hst(327, 90%) ;
+}
+input:: placeholder{
+color:transparent;
+}
+}
+label{
+color: 757575;
+position: relative;
+left: 1.2em;
+top: -1.3em;
+cursor: auto;
+transition: 0.3s ease all;
+}
+input:focus-label,input:not(placeholder-shown) label{
+top: -3em;
+color: hsl(327,90%, 28%);
+font-size: 15px;
+}
+.recover{
+text-align: right;
+font-size: 1rem;
+margin-bottom: 1rem;
+}
+.recover a {
+text-decoration: none;
+color: rgb(125,125,125);
+}
+.recover a:hover{
+color: blue;
+text-decoration: underline;
+}
+.btn{
+font-size: 1.1rem;
+padding: 8px 0;
+border-radius: 5px;
+outline: none;
+border: none;
+width: 100%;
+background: rgb(125,125,125,235);
+color: white;
+cursor: pointer;
+transition: 0.85s;
+}
+.btn:hover{
+background: #07001f;
+}
+
+.btn2 {
+font-size: 1.1rem;
+padding: 8px 0;
+border-radius: 5px;
+outline: none;
+border: none;
+width: 100%;
+background: rgb(125,125,125,235);
+color: white;
+cursor: pointer;
+transition: 0.85s;
+}
+.or{
+font-size: 1.1rem;
+margin-top: 0.5rem;
+text-align: center;
+}
+.icons{
+text-align: center;
+}
+.icon i {
+color: rgb(125,125,235);
+padding: 0.8rem 1.5rem;
+border-radius: 10px;
+font-size: 1.5rem;
+cursor: pointer;
+border: 2px solid #dfe9f5;
+margin: 0 15px;
+transition: 1s;
+}
+.icon i: hover{
+background: #07001f;
+font-size: 1.6rem;
+border: 2px solid rgb(125125,235);
+}
+.links{
+display: flex;
+justify-content: soace-around;
+padding: 0 4rem;
+margin-top: 0.9rem;
+font-weight: bold;
+}
+button{
+color: rgb(125,125,235);
+border: none;
+font-size: 1rem;
+font-weight: bold;
+}
+button:hover{
+text-decoration: underline;
+color: blue;
+}
+  </style>
+</head>
+
+<body>
+
+<div id="signuppage">
+
+<div class="card p-4" id="signupPage">
+  <h1 class="form-title">Sign Up</h1>
+  <div class="mb-3 position-relative">
+    <input type="text" class="form-control" id="signupUsername" placeholder="Choose Username">
+  </div>
+
+  <div class="mb-3 position-relative">
+    <input type="password" class="form-control" id="signupPassword" placeholder="Choose Password">
+    <span class="toggle-password" onclick="togglePassword('signupPassword', this)"></span>
+  </div>
+
+  <button class="btn btn-success w-100" onclick="signup()">Sign Up</button>
+
+  <div class="text-center mt-3">
+    <button class="toggle-link" onclick="showLogin()">Already have an account?</button>
+  </div>
+</div>
+
+
+
+<div class="card p-4" id="loginPage" style="display:none;">
+
+  <h3 class="form-title">Login</h3>
+  <div class="mb-3 position-relative">
+    <input type="text" class="form-control" id="loginUsername" placeholder="Enter Username">
+  </div>
+
+  <div class="mb-3 position-relative">
+    <input type="password" class="form-control" id="loginPassword" placeholder="Enter Password">
+    <span class="toggle-password" onclick="togglePassword('loginPassword', this)">👁️</span>
+  </div>
+
+  <button class="btn btn-primary w-100" onclick="login()">Login</button>
+
+  <div class="text-center mt-3">
+    <button class="toggle-link" onclick="showSignup()">Don't have an account?</button>
+  </div>
+</div>
+
+<div class="card p-4" id="shopPage" style="display:none;">
+  <h4>Hello <span id="userDisplay"></span>!</h4>
+
+  <div id="products" class="mt-3">
+    
+
+
+
+ 
+  <title>Order System</title>
+  
+  <style>
+ 
+    .container {
+      width: 100%;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .inside h1,.inside h2, .inside h3 {
+      text-align: center;
+      color: blue;
+      text-decoration: underline;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    .clear-btn {
+      background-color: #dc3545;
+    }
+    .clear-btn:hover {
+      background-color: #c82333;
+    }
+    .history-container {
+      display: none;
+      width: 90%;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    ol {
+      list-style-type: decimal;
+      padding: 10px;
+    }
+    li {
+      padding: 2px;
+      border-bottom: 1px solid #ccc;
+    }
+    
+    
+
+  </style>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>copps.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/6.6.0/css/all.min.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "poppins", Sans-Serif;
+    }
+    html, body {
+      height: 100%;
+      width: 100%;
+      background-color: #cad6ff;
+    }
+    .infor {
+      margin-left: 40px;
+    }
+    .container {
+      width: 100%;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .inside h1, .inside h2, .inside h3 {
+      text-align: center;
+      color: blue;
+      text-decoration: underline;
+    }
+    .history-container {
+      display: none;
+      width: 90%;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    ol { list-style-type: decimal; padding: 10px; }
+    li { padding: 2px; border-bottom: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+
+  
+  <section class="inside">
+    <div class="container">
+      <h1>My Current Order</h1>
+      <label for="productName">Product Name:</label>
+      <input type="text" id="productName" placeholder="Enter product name" />
+
+      <label for="quantity">Quantity (kg):</label>
+      <input type="number" id="quantity" placeholder="Enter quantity in kg" />
+
+      <label for="pricePerKg">Price per kg (k):</label>
+      <input type="number" id="pricePerKg" placeholder="Enter price per kg" />
+
+      <label for="totalAmount">Actual Price: k<span id="totalAmount">0.00</span></label>
+
+      <button id="processOrder">Process Order</button>
+      <button id="viewHistory">View Order History</button>
+    </div>
+
+    <div id="orderHistory" class="history-container">
+      <h2>Order History</h2>
+      <ol id="orderList"></ol>
+      <h3>Total Sales Today: k<span id="dailySales">0.00</span></h3>
+      <h3>Overall Total Sales: k<span id="totalSales">0.00</span></h3>
+      <button id="clearHistory" class="clear-btn">Clear Order History</button>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const productNameInput = document.getElementById('productName');
+      const quantityInput = document.getElementById('quantity');
+      const pricePerKgInput = document.getElementById('pricePerKg');
+      const totalAmountDisplay = document.getElementById('totalAmount');
+      const processOrderButton = document.getElementById('processOrder');
+      const viewHistoryButton = document.getElementById('viewHistory');
+      const clearHistoryButton = document.getElementById('clearHistory');
+      const orderHistoryContainer = document.getElementById('orderHistory');
+      const orderList = document.getElementById('orderList');
+      const totalSalesDisplay = document.getElementById('totalSales');
+      const dailySalesDisplay = document.getElementById('dailySales');
+
+      function getTodayDate() {
+        const now = new Date();
+        return now.toISOString().split('T')[0];
+      }
+
+      function loadOrders() {
+        const orders = JSON.parse(localStorage.getItem('orders')) || [];
+        const today = getTodayDate();
+        let totalSales = 0;
+        let dailySales = 0;
+        orderList.innerHTML = '';
+
+        orders.forEach(order => {
+          const li = document.createElement('li');
+          li.textContent = `${order.productName} - ${order.quantity}kg @ k${order.pricePerKg}/kg - k${order.totalPrice.toFixed(2)} - ${order.date}`;
+          orderList.appendChild(li);
+          totalSales += order.totalPrice;
+          if (order.date.startsWith(today)) {
+            dailySales += order.totalPrice;
+          }
+        });
+
+        totalSalesDisplay.textContent = totalSales.toFixed(2);
+        dailySalesDisplay.textContent = dailySales.toFixed(2);
+      }
+
+      function updateTotalAmount() {
+        const quantity = parseFloat(quantityInput.value);
+        const pricePerKg = parseFloat(pricePerKgInput.value);
+        const totalAmount = isNaN(quantity) || isNaN(pricePerKg) ? 0 : quantity * pricePerKg;
+        totalAmountDisplay.textContent = totalAmount.toFixed(2);
+      }
+
+      processOrderButton.addEventListener('click', function () {
+        const productName = productNameInput.value.trim();
+        const quantity = parseFloat(quantityInput.value);
+        const pricePerKg = parseFloat(pricePerKgInput.value);
+        const totalPrice = isNaN(quantity) || isNaN(pricePerKg) ? 0 : quantity * pricePerKg;
+        const date = new Date().toLocaleString();
+
+        if (productName && quantity > 0 && pricePerKg > 0) {
+          const order = { productName, quantity, pricePerKg, totalPrice, date };
+          const orders = JSON.parse(localStorage.getItem('orders')) || [];
+          orders.push(order);
+          localStorage.setItem('orders', JSON.stringify(orders));
+          alert('Order processed successfully!');
+          loadOrders();
+        } else {
+          alert('Please enter valid product name, quantity and price.');
+        }
+      });
+
+      viewHistoryButton.addEventListener('click', function () {
+        orderHistoryContainer.style.display = 'block';
+        loadOrders();
+      });
+
+      clearHistoryButton.addEventListener('click', function () {
+        if (confirm('Are you sure you want to clear all order history?')) {
+          localStorage.removeItem('orders');
+          orderList.innerHTML = '';
+          totalSalesDisplay.textContent = '0.00';
+          dailySalesDisplay.textContent = '0.00';
+        }
+      });
+
+      quantityInput.addEventListener('input', updateTotalAmount);
+      pricePerKgInput.addEventListener('input', updateTotalAmount);
+      updateTotalAmount();
+    });
+  </script>
+
+
+
+
+
+<script>
+  let cart = [];
+
+  function signup() {
+    const username = document.getElementById('signupUsername').value.trim();
+    const password = document.getElementById('signupPassword').value.trim();
+
+    if (username === '' || password === '') {
+      alert('Please enter username and password.');
+      return;
+    }
+
+    let users = JSON.parse(localStorage.getItem('users')) || [];
+
+    if (users.some(user => user.username === username)) {
+      alert('Username already exists.');
+      return;
+    }
+
+    users.push({ username, password });
+    localStorage.setItem('users', JSON.stringify(users));
+
+    alert('Signup successful!');
+    showLogin();
+  }
+
+  function login() {
+    const username = document.getElementById('loginUsername').value.trim();
+    const password = document.getElementById('loginPassword').value.trim();
+
+    if (username === '' || password === '') {
+      alert('Please enter username and password.');
+      return;
+    }
+
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    const user = users.find(u => u.username === username && u.password === password);
+
+    if (!user) {
+      alert('Incorrect username or password.');
+      return;
+    }
+
+    localStorage.setItem('currentUser', username);
+    document.getElementById('userDisplay').innerText = username;
+    showShop();
+  }
+
+  function togglePassword(fieldId, btn) {
+    const passwordField = document.getElementById(fieldId);
+
+    if (passwordField.type === 'password') {
+      passwordField.type = 'text';
+      btn.textContent = '🙈';
+    } else {
+      passwordField.type = 'password';
+      btn.textContent = '👁️';
+    }
+  }
+
+  function showSignup() {
+    document.getElementById('signupPage').style.display = 'block';
+    document.getElementById('loginPage').style.display = 'none';
+    document.getElementById('shopPage').style.display = 'none';
+  }
+
+  function showLogin() {
+    document.getElementById('signupPage').style.display = 'none';
+    document.getElementById('loginPage').style.display = 'block';
+    document.getElementById('shopPage').style.display = 'none';
+  }
+
+  function showShop() {
+    document.getElementById('signupPage').style.display = 'none';
+    document.getElementById('loginPage').style.display = 'none';
+    document.getElementById('shopPage').style.display = 'block';
+  }
+
+  
+</script>
+
+  
+
+
+  <script>
+    // script content
+    function logout() {
+      localStorage.removeItem('currentUser');
+showLogin();
+    }
+  </script>
+  <button class="btn btn-secondary" onclick="logout()">Logout</button>
+
+
+
+
+</body>
+</html>
